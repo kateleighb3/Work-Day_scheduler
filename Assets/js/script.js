@@ -25,7 +25,7 @@ $(function () {
 let today = dayjs();
 $("#currentDay").text(today.format("dddd, MMMM D, YYYY, hh:mm a"));
 
-$(".saveBtn").click(function(){
+$(".saveBtn").on("click", function(){
     //Get nearby values of the description in jQuery
     let text = $(this).siblings(".description").val(); // retrieves the value of the input element with the class "description" that is a sibling of the button
     let time = $(this).parent().attr("id"); // retrieves the ID of the parent element (time-block/div id=hour-9) that contains the button.
